@@ -150,7 +150,9 @@
                                     <h5 class="card-title">Monitor 24"</h5>
                                     <p class="text-muted small">Samsung</p>
                                     <p class="card-text text-primary fw-bold">$250.00</p>
-                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                    <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalProducto1">
+                                        Ver más
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +170,9 @@
                                     <h5 class="card-title">Camiseta Deportiva</h5>
                                     <p class="text-muted small">Nike</p>
                                     <p class="card-text"><del>$60.00</del> <strong class="text-danger">$45.00</strong></p>
-                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                    <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalProducto2">
+                                        Ver más
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +190,9 @@
                                     <h5 class="card-title">Harry Potter Libro 1</h5>
                                     <p class="text-muted small">Penguin</p>
                                     <p class="card-text text-primary fw-bold">$25.00</p>
-                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                    <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalProducto3">
+                                        Ver más
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +207,9 @@
                                     <h5 class="card-title">Lámpara LED</h5>
                                     <p class="text-muted small">IKEA</p>
                                     <p class="card-text text-primary fw-bold">$55.00</p>
-                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                    <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalProducto4">
+                                        Ver más
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +224,9 @@
                                     <h5 class="card-title">Botella Coca-Cola 2L</h5>
                                     <p class="text-muted small">Coca-Cola</p>
                                     <p class="card-text text-primary fw-bold">$3.50</p>
-                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                    <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalProducto5">
+                                        Ver más
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +241,9 @@
                                     <h5 class="card-title">Sofá de cuero</h5>
                                     <p class="text-muted small">IKEA</p>
                                     <p class="card-text text-primary fw-bold">$350.00</p>
-                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                    <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modalProducto6">
+                                        Ver más
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -255,6 +267,318 @@
                             </li>
                         </ul>
                     </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALES DE PRODUCTOS -->
+
+    <!-- Modal Producto 1 -->
+    <div class="modal fade" id="modalProducto1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" style="z-index: 1;"></button>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bg-secondary rounded" style="height: 300px;">
+                                <i class="fas fa-laptop fa-8x text-white d-flex align-items-center justify-content-center h-100"></i>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <div class="bg-secondary rounded" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-laptop fa-2x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                                <div class="bg-secondary rounded" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-laptop fa-2x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                                <div class="bg-secondary rounded" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-laptop fa-2x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bold mb-2">Monitor 24" Samsung</h3>
+                            <p class="text-muted">SKU: SAM-1234</p>
+                            <p class="text-danger fw-bold fs-5">$250.00</p>
+                            <p class="text-success mb-3">Stock disponible</p>
+                            
+                            <p><strong>Descripción:</strong></p>
+                            <p>Monitor de alta resolución 4K Ultra HD, perfecto para trabajo y entretenimiento. Panel IPS, 60Hz, conexión HDMI y DisplayPort.</p>
+
+                            <p><strong>Características:</strong></p>
+                            <ul>
+                                <li>Resolución: 4K (3840 x 2160)</li>
+                                <li>Panel: IPS</li>
+                                <li>Frecuencia: 60Hz</li>
+                                <li>Tiempo de respuesta: 5ms</li>
+                            </ul>
+
+                            <div class="mb-3">
+                                <label for="cantidad1" class="form-label"><strong>Cantidad:</strong></label>
+                                <input type="number" id="cantidad1" class="form-control" value="1" min="1" style="width: 100px;">
+                            </div>
+
+                            <a href="carrito.html" class="btn btn-primary btn-lg w-100 mb-2">
+                                <i class="fas fa-shopping-cart"></i> COMPRAR
+                            </a>
+                            <button type="button" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-heart"></i> Agregar a favoritos
+                            </button>
+
+                            <hr>
+                            <p class="small text-muted">
+                                <i class="fas fa-info-circle"></i> 
+                                <strong>Ver todos los detalles del producto</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Producto 2 -->
+    <div class="modal fade" id="modalProducto2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" style="z-index: 1;"></button>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bg-secondary rounded" style="height: 300px;">
+                                <i class="fas fa-tshirt fa-8x text-white d-flex align-items-center justify-content-center h-100"></i>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <div class="bg-secondary rounded" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-tshirt fa-2x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                                <div class="bg-secondary rounded" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-tshirt fa-2x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                                <div class="bg-secondary rounded" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-tshirt fa-2x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bold mb-2">Camiseta Deportiva Nike</h3>
+                            <p class="text-muted">SKU: NIK-5678</p>
+                            <p class="text-danger fw-bold fs-5"><del>$60.00</del> $45.00</p>
+                            <p class="text-success mb-3">Stock disponible</p>
+                            
+                            <p><strong>Descripción:</strong></p>
+                            <p>Camiseta deportiva de alta calidad, cómoda y transpirable. Perfecta para entrenamientos y uso casual.</p>
+
+                            <p><strong>Especificaciones:</strong></p>
+                            <ul>
+                                <li>Material: 100% Poliéster</li>
+                                <li>Tallas: XS a XXL</li>
+                                <li>Colores disponibles: Negro, Azul, Rojo</li>
+                                <li>Tecnología: Dry-Fit</li>
+                            </ul>
+
+                            <div class="mb-3">
+                                <label for="cantidad2" class="form-label"><strong>Cantidad:</strong></label>
+                                <input type="number" id="cantidad2" class="form-control" value="1" min="1" style="width: 100px;">
+                            </div>
+
+                            <a href="carrito.html" class="btn btn-primary btn-lg w-100 mb-2">
+                                <i class="fas fa-shopping-cart"></i> COMPRAR
+                            </a>
+                            <button type="button" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-heart"></i> Agregar a favoritos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Producto 3 -->
+    <div class="modal fade" id="modalProducto3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" style="z-index: 1;"></button>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bg-secondary rounded" style="height: 300px;">
+                                <i class="fas fa-book fa-8x text-white d-flex align-items-center justify-content-center h-100"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bold mb-2">Harry Potter y la Piedra Filosofal</h3>
+                            <p class="text-muted">SKU: BOOK-1001</p>
+                            <p class="text-danger fw-bold fs-5">$25.00</p>
+                            <p class="text-success mb-3">Stock disponible</p>
+                            
+                            <p><strong>Sinopsis:</strong></p>
+                            <p>El inicio de la legendaria saga de Harry Potter. Un joven mago descubre su verdadero destino en Hogwarts.</p>
+
+                            <p><strong>Información:</strong></p>
+                            <ul>
+                                <li>Autor: J.K. Rowling</li>
+                                <li>Páginas: 309</li>
+                                <li>Editorial: Penguin</li>
+                                <li>Idioma: Español</li>
+                            </ul>
+
+                            <div class="mb-3">
+                                <label for="cantidad3" class="form-label"><strong>Cantidad:</strong></label>
+                                <input type="number" id="cantidad3" class="form-control" value="1" min="1" style="width: 100px;">
+                            </div>
+
+                            <a href="carrito.html" class="btn btn-primary btn-lg w-100 mb-2">
+                                <i class="fas fa-shopping-cart"></i> COMPRAR
+                            </a>
+                            <button type="button" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-heart"></i> Agregar a favoritos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Producto 4 -->
+    <div class="modal fade" id="modalProducto4" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" style="z-index: 1;"></button>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bg-secondary rounded" style="height: 300px;">
+                                <i class="fas fa-lamp fa-8x text-white d-flex align-items-center justify-content-center h-100"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bold mb-2">Lámpara LED de Escritorio</h3>
+                            <p class="text-muted">SKU: LED-3456</p>
+                            <p class="text-danger fw-bold fs-5">$55.00</p>
+                            <p class="text-success mb-3">Stock disponible</p>
+                            
+                            <p><strong>Descripción:</strong></p>
+                            <p>Lámpara LED moderna con luz ajustable. Ideal para escritorio y trabajo nocturno.</p>
+
+                            <p><strong>Características:</strong></p>
+                            <ul>
+                                <li>Luz ajustable: 3 niveles</li>
+                                <li>Material: Aluminio</li>
+                                <li>Conexión: USB</li>
+                                <li>Color: Blanco/Negro</li>
+                            </ul>
+
+                            <div class="mb-3">
+                                <label for="cantidad4" class="form-label"><strong>Cantidad:</strong></label>
+                                <input type="number" id="cantidad4" class="form-control" value="1" min="1" style="width: 100px;">
+                            </div>
+
+                            <a href="carrito.html" class="btn btn-primary btn-lg w-100 mb-2">
+                                <i class="fas fa-shopping-cart"></i> COMPRAR
+                            </a>
+                            <button type="button" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-heart"></i> Agregar a favoritos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Producto 5 -->
+    <div class="modal fade" id="modalProducto5" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" style="z-index: 1;"></button>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bg-secondary rounded" style="height: 300px;">
+                                <i class="fas fa-utensils fa-8x text-white d-flex align-items-center justify-content-center h-100"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bold mb-2">Botella Coca-Cola 2L</h3>
+                            <p class="text-muted">SKU: COKE-2L</p>
+                            <p class="text-danger fw-bold fs-5">$3.50</p>
+                            <p class="text-success mb-3">Stock disponible</p>
+                            
+                            <p><strong>Descripción:</strong></p>
+                            <p>Refresco Coca-Cola de 2 litros. Refrescante bebida ideal para cualquier ocasión.</p>
+
+                            <p><strong>Información:</strong></p>
+                            <ul>
+                                <li>Tamaño: 2 litros</li>
+                                <li>Tipo: Bebida carbonatada</li>
+                                <li>Calorías: 140 por 240ml</li>
+                                <li>Almacenamiento: Refrigerado</li>
+                            </ul>
+
+                            <div class="mb-3">
+                                <label for="cantidad5" class="form-label"><strong>Cantidad:</strong></label>
+                                <input type="number" id="cantidad5" class="form-control" value="1" min="1" style="width: 100px;">
+                            </div>
+
+                            <a href="carrito.html" class="btn btn-primary btn-lg w-100 mb-2">
+                                <i class="fas fa-shopping-cart"></i> COMPRAR
+                            </a>
+                            <button type="button" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-heart"></i> Agregar a favoritos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Producto 6 -->
+    <div class="modal fade" id="modalProducto6" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" style="z-index: 1;"></button>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bg-secondary rounded" style="height: 300px;">
+                                <i class="fas fa-couch fa-8x text-white d-flex align-items-center justify-content-center h-100"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bold mb-2">Sofá de Cuero Premium</h3>
+                            <p class="text-muted">SKU: SOFA-PREM</p>
+                            <p class="text-danger fw-bold fs-5">$350.00</p>
+                            <p class="text-success mb-3">Stock disponible</p>
+                            
+                            <p><strong>Descripción:</strong></p>
+                            <p>Sofá de cuero genuino de alta calidad. Diseño moderno y cómodo para tu sala.</p>
+
+                            <p><strong>Especificaciones:</strong></p>
+                            <ul>
+                                <li>Material: Cuero 100% genuino</li>
+                                <li>Dimensiones: 200x90x80cm</li>
+                                <li>Colores: Negro, Marrón, Gris</li>
+                                <li>Capacidad: 3-4 personas</li>
+                            </ul>
+
+                            <div class="mb-3">
+                                <label for="cantidad6" class="form-label"><strong>Cantidad:</strong></label>
+                                <input type="number" id="cantidad6" class="form-control" value="1" min="1" style="width: 100px;">
+                            </div>
+
+                            <a href="carrito.html" class="btn btn-primary btn-lg w-100 mb-2">
+                                <i class="fas fa-shopping-cart"></i> COMPRAR
+                            </a>
+                            <button type="button" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-heart"></i> Agregar a favoritos
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
