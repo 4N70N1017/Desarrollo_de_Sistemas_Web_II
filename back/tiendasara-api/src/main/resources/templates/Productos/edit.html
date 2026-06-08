@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product - Tienda Sara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #f8f9fa; }
+        .form-container { background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,.1); padding: 30px; }
+        .form-label { font-weight: 500; color: #333; }
+        .error-message { color: #dc3545; font-size: 0.875rem; margin-top: 0.25rem; }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="mb-4">Edit Product</h2>
+                
+                <div class="form-container">
+                    <form th:action="@{/products/{id}(id=${productDto.id})}" th:object="${productDto}" method="post">
+                        <input type="hidden" th:field="*{id}">
+
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="descripcion" th:field="*{descripcion}" required>
+                            <div class="error-message" th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="precio" th:field="*{precio}" step="0.01" required>
+                            <div class="error-message" th:if="${#fields.hasErrors('precio')}" th:errors="*{precio}"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="cantidad" th:field="*{cantidad}" required>
+                            <div class="error-message" th:if="${#fields.hasErrors('cantidad')}" th:errors="*{cantidad}"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="idCategoria" class="form-label">Category</label>
+                            <select class="form-select" id="idCategoria" th:field="*{idCategoria}" required>
+                                <option value="">Select a category</option>
+                                <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.descripcion}"></option>
+                            </select>
+                            <div class="error-message" th:if="${#fields.hasErrors('idCategoria')}" th:errors="*{idCategoria}"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="idMarca" class="form-label">Mark</label>
+                            <select class="form-select" id="idMarca" th:field="*{idMarca}" required>
+                                <option value="">Select a mark</option>
+                                <option th:each="mark : ${marks}" th:value="${mark.id}" th:text="${mark.descripcion}"></option>
+                            </select>
+                            <div class="error-message" th:if="${#fields.hasErrors('idMarca')}" th:errors="*{idMarca}"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="imagen" class="form-label">Image (URL)</label>
+                            <input type="text" class="form-control" id="imagen" th:field="*{imagen}">
+                        </div>
+
+                        <div th:if="${error}" class="alert alert-danger" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i> [[${error}]]
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Update
+                            </button>
+                            <a href="/products" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
