@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Sara - Inicio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR (ENCABEZADO) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shopping-bag"></i> <strong>Tienda Sara</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">
+                            <i class="fas fa-shopping-cart"></i> Carrito
+                        </a>
+                    </li>
+                </ul>
+                <!-- Buscador -->
+                <form class="d-flex ms-3" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar...">
+                    <button class="btn btn-outline-light btn-sm" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CARRUSEL/BANNER PRINCIPAL -->
+    <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="bg-primary text-white text-center py-5">
+                    <h1 class="display-4">¡Bienvenido a Tienda Sara!</h1>
+                    <p class="lead">Descubre nuestros mejores productos con descuentos increíbles</p>
+                    <a href="galeria.html" class="btn btn-light btn-lg">Explorar productos</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="bg-success text-white text-center py-5">
+                    <h1 class="display-4">Ofertas Especiales</h1>
+                    <p class="lead">Hasta 50% de descuento en productos seleccionados</p>
+                    <a href="galeria.html" class="btn btn-light btn-lg">Ver ofertas</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="bg-danger text-white text-center py-5">
+                    <h1 class="display-4">Envío Gratis</h1>
+                    <p class="lead">En compras mayores a $50</p>
+                    <a href="galeria.html" class="btn btn-light btn-lg">Compra ahora</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- CATEGORÍAS PRINCIPALES -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestras Categorías</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-laptop fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Electrónica</h5>
+                            <p class="text-muted">Últimos gadgets y tecnología</p>
+                            <a href="galeria.html" class="btn btn-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-tshirt fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Ropa</h5>
+                            <p class="text-muted">Moda y ropa casual</p>
+                            <a href="galeria.html" class="btn btn-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-utensils fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">Alimentos</h5>
+                            <p class="text-muted">Productos frescos y deliciosos</p>
+                            <a href="galeria.html" class="btn btn-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-home fa-3x text-info mb-3"></i>
+                            <h5 class="card-title">Hogar</h5>
+                            <p class="text-muted">Decoración y muebles</p>
+                            <a href="galeria.html" class="btn btn-primary btn-sm">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Productos Recomendados</h2>
+            <div class="row g-4">
+                <!-- Producto 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-img-top bg-secondary" style="height: 200px;">
+                            <i class="fas fa-laptop fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Monitor 24"</h5>
+                            <p class="text-muted">Resolución 4K Ultra HD</p>
+                            <p class="card-text text-primary fw-bold">$250.00</p>
+                            <a href="carrito.html" class="btn btn-primary btn-sm w-100">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-img-top bg-secondary" style="height: 200px;">
+                            <i class="fas fa-tshirt fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta Deportiva</h5>
+                            <p class="text-muted">Talla: XS a XXL</p>
+                            <p class="card-text text-primary fw-bold">$45.00</p>
+                            <a href="carrito.html" class="btn btn-primary btn-sm w-100">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-img-top bg-secondary" style="height: 200px;">
+                            <i class="fas fa-book fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Harry Potter Libro 1</h5>
+                            <p class="text-muted">Edición de bolsillo</p>
+                            <p class="card-text text-primary fw-bold">$25.00</p>
+                            <a href="carrito.html" class="btn btn-primary btn-sm w-100">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-img-top bg-secondary" style="height: 200px;">
+                            <i class="fas fa-lamp fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lámpara LED</h5>
+                            <p class="text-muted">Luz ajustable</p>
+                            <p class="card-text text-primary fw-bold">$55.00</p>
+                            <a href="carrito.html" class="btn btn-primary btn-sm w-100">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMACIÓN DE LA TIENDA -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Sobre Tienda Sara</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <h5>Misión</h5>
+                    <p>Proporcionar productos de calidad a precios asequibles.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <h5>Visión</h5>
+                    <p>Ser la tienda en línea más confiable de la región.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <h5>Valores</h5>
+                    <p>Calidad, confianza y servicio al cliente excepcional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Tienda Sara</h5>
+                    <p>Tu tienda en línea de confianza para todos tus productos.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-white">Sobre nosotros</a></li>
+                        <li><a href="#" class="text-decoration-none text-white">Política de privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-white">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-decoration-none text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p>&copy; 2024 Tienda Sara. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS personalizado -->
+    <script src="js/script.js"></script>
+</body>
+</html>
