@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Productos - Tienda Sara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shopping-bag"></i> <strong>Tienda Sara</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="galeria.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">
+                            <i class="fas fa-shopping-cart"></i> Carrito
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar...">
+                    <button class="btn btn-outline-light btn-sm" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <!-- BARRA LATERAL - FILTROS -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Filtrar por:</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Filtro de Categoría -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">Categoría</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cat1">
+                                    <label class="form-check-label" for="cat1">Electrónica</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cat2">
+                                    <label class="form-check-label" for="cat2">Ropa</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cat3">
+                                    <label class="form-check-label" for="cat3">Alimentos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="cat4">
+                                    <label class="form-check-label" for="cat4">Hogar</label>
+                                </div>
+                            </div>
+
+                            <!-- Filtro de Marca -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">Marca</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="marca1">
+                                    <label class="form-check-label" for="marca1">Samsung</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="marca2">
+                                    <label class="form-check-label" for="marca2">Nike</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="marca3">
+                                    <label class="form-check-label" for="marca3">IKEA</label>
+                                </div>
+                            </div>
+
+                            <!-- Filtro de Precio -->
+                            <div class="mb-4">
+                                <h6 class="fw-bold">Precio</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price1">
+                                    <label class="form-check-label" for="price1">$0 - $50</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price2">
+                                    <label class="form-check-label" for="price2">$50 - $150</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price3">
+                                    <label class="form-check-label" for="price3">$150 - $300</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price4">
+                                    <label class="form-check-label" for="price4">$300+</label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-secondary w-100">Aplicar filtros</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRID DE PRODUCTOS -->
+                <div class="col-md-9">
+                    <!-- Opciones de ordenamiento -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4>Productos</h4>
+                        <div>
+                            <label for="ordenar" class="me-2">Ordenar por:</label>
+                            <select class="form-select form-select-sm d-inline-block" id="ordenar" style="width: auto;">
+                                <option selected>Relevancia</option>
+                                <option>Precio: Menor a Mayor</option>
+                                <option>Precio: Mayor a Menor</option>
+                                <option>Más Popular</option>
+                                <option>Más Nuevo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Grid de productos -->
+                    <div class="row g-4">
+                        <!-- Producto 1 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <div class="card-img-top bg-secondary" style="height: 200px;">
+                                        <i class="fas fa-laptop fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                    </div>
+                                    <span class="badge bg-danger position-absolute top-0 end-0 m-2">Nuevo</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Monitor 24"</h5>
+                                    <p class="text-muted small">Samsung</p>
+                                    <p class="card-text text-primary fw-bold">$250.00</p>
+                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <div class="card-img-top bg-secondary" style="height: 200px;">
+                                        <i class="fas fa-tshirt fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                    </div>
+                                    <span class="badge bg-success position-absolute top-0 end-0 m-2">Descuento</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Camiseta Deportiva</h5>
+                                    <p class="text-muted small">Nike</p>
+                                    <p class="card-text"><del>$60.00</del> <strong class="text-danger">$45.00</strong></p>
+                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <div class="card-img-top bg-secondary" style="height: 200px;">
+                                        <i class="fas fa-book fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                    </div>
+                                    <span class="badge bg-warning position-absolute top-0 end-0 m-2">Popular</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Harry Potter Libro 1</h5>
+                                    <p class="text-muted small">Penguin</p>
+                                    <p class="card-text text-primary fw-bold">$25.00</p>
+                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-img-top bg-secondary" style="height: 200px;">
+                                    <i class="fas fa-lamp fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Lámpara LED</h5>
+                                    <p class="text-muted small">IKEA</p>
+                                    <p class="card-text text-primary fw-bold">$55.00</p>
+                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 5 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-img-top bg-secondary" style="height: 200px;">
+                                    <i class="fas fa-utensils fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Botella Coca-Cola 2L</h5>
+                                    <p class="text-muted small">Coca-Cola</p>
+                                    <p class="card-text text-primary fw-bold">$3.50</p>
+                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Producto 6 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-img-top bg-secondary" style="height: 200px;">
+                                    <i class="fas fa-couch fa-5x text-white d-flex align-items-center justify-content-center h-100"></i>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Sofá de cuero</h5>
+                                    <p class="text-muted small">IKEA</p>
+                                    <p class="card-text text-primary fw-bold">$350.00</p>
+                                    <button class="btn btn-primary btn-sm w-100">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAGINACIÓN -->
+                    <nav aria-label="Page navigation" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Tienda Sara</h5>
+                    <p>Tu tienda en línea de confianza.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-white">Sobre nosotros</a></li>
+                        <li><a href="#" class="text-decoration-none text-white">Política de privacidad</a></li>
+                        <li><a href="#" class="text-decoration-none text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p>&copy; 2024 Tienda Sara. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
